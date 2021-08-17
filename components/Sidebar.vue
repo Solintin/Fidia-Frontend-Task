@@ -17,7 +17,7 @@
           </div>
 
           <div class="contents-list">
-            <div v-for="link in data" :key="link">
+            <div v-for="(link, id) in data" :key="id">
               <div class="link-list">
                 <img :src="require(`@/assets/icons/${link.icon}`)" alt="icon" />
                 <div>
@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import data from './Contents.js'
+import data from '~/components/Contents.js'
 export default {
   data() {
     return {

@@ -71,7 +71,9 @@
 
 <script>
 
-import {succeddedPayment, uncapturedPayment, refundedPayment } from './PaymentData.js'
+import  RefundedPaymentData from '~/components/RefundedPaymentData.js'
+import  SucceddedPaymentData from '~/components/SucceddedPaymentData.js'
+import  UncapturedPaymentData from '~/components/UncapturedPaymentData.js'
 export default {
   data() {
     return {
@@ -82,15 +84,15 @@ export default {
   computed: {
     getPaymentDetails() {
       if (this.activeTab === 'all') {
-        this.paymentDatabase = succeddedPayment
-          .concat(refundedPayment)
-          .concat(uncapturedPayment)
+        this.paymentDatabase = SucceddedPaymentData
+          .concat(RefundedPaymentData)
+          .concat(UncapturedPaymentData)
       } else if (this.activeTab === 'succedded') {
-        this.paymentDatabase = succeddedPayment
+        this.paymentDatabase = SucceddedPaymentData
       } else if (this.activeTab === 'refunded') {
-        this.paymentDatabase = refundedPayment
+        this.paymentDatabase = RefundedPaymentData
       } else {
-        this.paymentDatabase = uncapturedPayment
+        this.paymentDatabase = UncapturedPaymentData
       }
 
       return this.paymentDatabase
