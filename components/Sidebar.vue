@@ -94,9 +94,10 @@ export default {
 
   position: fixed;
   width: 270px;
-  height: 900px;
-  left: 0px;
-  top: 0px;
+  // height: 900px;
+  left: 0;
+  top: 0;
+  bottom : 0;
   box-sizing: border-box;
 
   /* Grey 100 */

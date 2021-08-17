@@ -79,8 +79,10 @@ export default {}
   //   header syling
   header {
     position: fixed;
-    right :20px;
-    min-width: 77%;
+    right : 14px;
+    left : 270px;
+    // margin-right: 40%;
+    // min-width: 1130px;
     border-bottom: 1px solid #e3e8ee;
     z-index: 1;
     display: flex;
