@@ -1,10 +1,13 @@
 <template>
   <div>
+    <!-- Sign In Card Tempplate -->
     <div class="sign-in-card">
       <div class="sign-in-container">
         <h1>Sign in to your account</h1>
         <div class="form-field">
+          <!--====== Form Filling Begins===== -->
           <form @submit.prevent>
+            <!-- Email Input Begins -->
             <div class="form-input">
               <label for="email"> Email </label>
               <div class="input-wrap">
@@ -17,6 +20,7 @@
                 />
               </div>
             </div>
+            <!-- Email Input Ends -->
 
             <div class="form-input">
               <div class="password-field">
@@ -24,6 +28,8 @@
 
                 <span> <a href="#"> Forgot Password </a> </span>
               </div>
+              <!-- Password Input Begins -->
+
               <div class="input-wrap">
                 <input
                   required
@@ -32,6 +38,8 @@
                   v-model.trim="password"
                   placeholder="Password"
                 />
+                <!-- Password Visibilty Logic -->
+
                 <div class="input-icon" @click="switchVisibility">
                   <span v-if="passwordVisible">
                     <fa :icon="['fas', 'eye']" />
@@ -41,6 +49,7 @@
                   </span>
                 </div>
               </div>
+              <!-- Password Input Ends -->
             </div>
 
             <div class="check-input">
@@ -49,13 +58,12 @@
             </div>
 
             <div class="form-input" @click="logIn">
-              
-              <button >
-                  <span v-if="loader">
-                <Loading />
-              </span>
-                  <span v-else>Continue</span>
-                  </button>
+              <button>
+                <span v-if="loader">
+                  <Loading />
+                </span>
+                <span v-else>Continue</span>
+              </button>
             </div>
 
             <div class="alternative-auth">
@@ -79,6 +87,7 @@ export default {
     }
   },
   methods: {
+    // Password Visibility Logic/Method
     switchVisibility() {
       this.passwordVisible = !this.passwordVisible
       const passwordField = document.querySelector('#password')
@@ -86,19 +95,21 @@ export default {
         passwordField.setAttribute('type', 'text')
       else passwordField.setAttribute('type', 'password')
     },
+
+    // Login Method
     logIn() {
       this.loader = !this.loader
       setTimeout(() => {
         this.$nuxt.$options.router.push('/dashboard')
         this.loader = !this.loader
       }, 1500)
-      
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+
 .sign-in-card {
   border-radius: 4px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12),

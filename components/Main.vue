@@ -9,7 +9,7 @@
           <input type="search" name="" placeholder="Search..." />
         </div>
         <!-- Three Right Dashboard icons -->
-        <div class="header-tab right-menu">
+        <div class="header-tab ">
           <div>
             <a href="#"
               ><img src="@/assets/icons/notifications-1.svg" alt=""
@@ -25,7 +25,9 @@
       </header>
       <!-- =========== Dashbaord Header Ends ============= -->
 
-      <!-- =========== Dashbaord Contents Begins ============= -->
+
+
+      <!-- =========== Dashbaord ContentsTop  Begins ============= -->
 
       <div class="content-wrapper">
         <div class="content-header">
@@ -45,6 +47,9 @@
             </div>
           </div>
         </div>
+      <!-- =========== Dashbaord Contents Top Ends  ============= -->
+
+
 
         <!-- =========== Dashbaord Payment Details Components ============= -->
 
@@ -105,7 +110,7 @@ export default {}
     flex-direction: row;
     align-items: center;
     div {
-      margin-right: 10px;
+      margin-right: 14px;
      
     }
   }

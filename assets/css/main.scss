@@ -1,3 +1,4 @@
+// SF pro Font Import
 @font-face {
   font-family: SF Pro Display;
   src: local('SF Pro'), url(~assets/css/sm-pro-font.ttf) format('truetype');
@@ -7,7 +8,6 @@ html {
 }
 // General CSS rules 
 * {
-  list-style: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

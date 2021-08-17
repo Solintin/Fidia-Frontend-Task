@@ -3,23 +3,25 @@
     <div class="base-layout">
       <div class="layout-container">
         <div class="fixed-background">
+          <!-- Four Lines Layout Dimensioning -->
           <div class="first-line"></div>
           <div class="second-line"></div>
           <div class="fourth-line"></div>
           <div class="fifth-line"></div>
         </div>
+        <!-- Skewed Background and Attached Side Stripes -->
         <div class="skew-background">
           <div class="first-left-stripe"></div>
           <div class="second-left-stripe"></div>
           <div class="left-blend-stripe"></div>
           <div class="first-right-stripe"></div>
         </div>
-
+        <!-- ============== Login Component Container  Begin ================= -->
         <div class="content-container">
           <div class="form-container">
             <div class="logo"><img src="@/assets/icons/logo.svg" alt="" /></div>
 
-            <SignUp />
+            <SignIn />
 
             <div class="bottom-content">
               <div>
@@ -35,6 +37,7 @@
             </div>
           </div>
         </div>
+        <!-- =============== Login Component Container End========== -->
       </div>
     </div>
   </div>
@@ -45,6 +48,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+// Login Component Styling
 .content-container {
   position: relative;
 
@@ -58,21 +62,22 @@ export default {}
   box-sizing: border;
   z-index: 0;
 
+  //Form Styling
   .form-container {
     display: flex;
     flex-direction: column;
     box-sizing: border;
     width: 540px;
     min-width: 540px;
-
+    //Stripe Logo
     .logo {
       padding-bottom: 40px;
       padding-left: 20px;
     }
 
+    // login bottom content styling
     .bottom-content {
-
-      color: #4F566B;
+      color: #4f566b;
       font-size: 14px;
       margin: 15px 0;
       padding: 10px 15px;

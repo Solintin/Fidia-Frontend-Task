@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'fidia-task',
+    title: 'Fidia - Stripe Login And Dashboard Clone',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -26,12 +26,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/fontawesome',
   ],
-  styleResources: {
-    scss: [
-      // '~assets/scss/mixins.scss',
-      // '~assets/scss/variables.scss'
-    ],
-  },
+
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

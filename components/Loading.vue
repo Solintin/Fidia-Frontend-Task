@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Login Loader Component -->
     <div class="lds-ellipsis">
       <div></div>
       <div></div>
@@ -14,6 +15,8 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+    //  Login Loader Styling
+     
 .lds-ellipsis {
   display: inline-block;
   position: relative;

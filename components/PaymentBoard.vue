@@ -71,9 +71,9 @@
 
 <script>
 
-import  RefundedPaymentData from '~/Data/RefundedPaymentData.js'
-import  SucceddedPaymentData from '~/Data/SucceddedPaymentData.js'
-import  UncapturedPaymentData from '~/Data/UncapturedPaymentData.js'
+import  RefundedPaymentData from '~/Data/RefundedPaymentData.js' //importing Refundedpayment Details JSON Endpoint
+import  SucceddedPaymentData from '~/Data/SucceddedPaymentData.js'  //importing Suceddedpayment Details JSON Endpoint
+import  UncapturedPaymentData from '~/Data/UncapturedPaymentData.js'  //importing Uncaptueredpayment Details JSON Endpoint
 export default {
   data() {
     return {
@@ -82,6 +82,7 @@ export default {
     }
   },
   computed: {
+    // Dynamic Data(All, Sucedded, Refunded And Uncaptured) Rendering On the Dashboard 
     getPaymentDetails() {
       if (this.activeTab === 'all') {
         this.paymentDatabase = SucceddedPaymentData
@@ -99,6 +100,8 @@ export default {
     },
   },
   methods: {
+    // Functions To Switch Tabs
+
     switchToAll() {
       this.activeTab = 'all'
       this.getPaymentDetails
@@ -180,14 +183,14 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2px 6px 2px 6px;
+  padding: 2px 8px 2px 4px;
   border-radius: 26px;
   font-family: 'Times New Roman', Times, serif !important;
 
 
   img {
-    height: 70%;
-    width: 70%;
+    height: 10px;
+    width: 8px;
     margin-left: 5px;
   }
 }

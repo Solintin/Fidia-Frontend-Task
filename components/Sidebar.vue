@@ -8,6 +8,7 @@
               <img src="@/assets/icons/Store-icon.svg" alt="store-icon" />
             </div>
             <div>
+              <!-- Top DropDOwn -->
               <select name="dropdown">
                 <option value="store-name">Store Name</option>
                 <option value="store-name">Other Option</option>
@@ -16,6 +17,7 @@
             </div>
           </div>
 
+          <!--  Sidebar Links Rendering Dynamically-->
           <div class="contents-list">
             <div v-for="(link, id) in data" :key="id">
               <div class="link-list">
@@ -44,6 +46,7 @@
                 <a href="#">Developers</a>
               </div>
             </div>
+            <!-- Toggle Switch  -->
             <div class="link-list settings">
               <div class="switch">
                 <div
@@ -55,6 +58,7 @@
                 <a href="#">View test data</a>
               </div>
             </div>
+
             <div class="link-list">
               <img src="@/assets/icons/settings-1.svg" alt="icon" />
               <div>
@@ -78,6 +82,8 @@ export default {
     }
   },
   methods: {
+
+    // Toggle Switch Methods
     toggleSwitch() {
       this.onSwitch = !this.onSwitch
     },
@@ -94,10 +100,9 @@ export default {
 
   position: fixed;
   width: 270px;
-  // height: 900px;
   left: 0;
   top: 0;
-  bottom : 0;
+  bottom: 0;
   box-sizing: border-box;
 
   /* Grey 100 */
