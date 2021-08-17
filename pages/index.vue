@@ -31,7 +31,7 @@
                 <ul>
                   <li><span>&copy; </span>Stripe</li>
                   <li>Contact</li>
-                  <li>Privacy & terms</li>
+                  <li>Privacy &amp; terms</li>
                 </ul>
               </div>
             </div>
