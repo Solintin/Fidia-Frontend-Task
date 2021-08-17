@@ -1,0 +1,140 @@
+@font-face {
+  font-family: SF Pro Display;
+  src: local('SF Pro'), url(~assets/css/sm-pro-font.ttf) format('truetype');
+}
+html {
+  font-family: SF Pro Display;
+}
+// General CSS rules 
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+  &::after,
+  ::before {
+    box-sizing: border;
+  }
+}
+
+.base-layout {
+  background: #fff;
+  height: 100vh;
+
+  .layout-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #fff;
+
+    .fixed-background {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      background-color: #fff;
+
+      .first-line {
+        position: absolute;
+        top: -100vh;
+        bottom: -100vh;
+        left: calc(50% - 540px);
+        right: auto;
+        width: 1px;
+        background: #eceef4;
+      }
+      .second-line {
+        position: absolute;
+        top: -100vh;
+        bottom: -100vh;
+        left: calc(50% - 270px);
+        right: auto;
+        width: 1px;
+        background-size: 1px 8px;
+        background-image: linear-gradient(
+          180deg,
+          #eceef4 49%,
+          rgba(236, 238, 244, 0)
+        );
+      }
+
+      .fourth-line {
+        position: absolute;
+        top: -100vh;
+        bottom: -100vh;
+        left: calc(50% + 269px);
+        right: auto;
+        width: 1px;
+        background-size: 1px 8px;
+        background-image: linear-gradient(
+          180deg,
+          #eceef4 49%,
+          rgba(236, 238, 244, 0)
+        );
+      }
+      .fifth-line {
+        position: absolute;
+        top: -100vh;
+        bottom: -100vh;
+        left: calc(50% + 540px);
+        right: auto;
+        width: 1px;
+        background: #eceef4;
+      }
+    }
+    .skew-background {
+      position: fixed;
+      background: rgba(93, 100, 105, 0.1);
+      left: 0;
+      right: 0;
+      top: -1000px;
+      bottom: 50%;
+      transform: skewY(-12deg);
+
+      .first-left-stripe {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 700px);
+        right: calc(50% + 540px);
+        height: 40px;
+        background-color: #80e9ff;
+      }
+      .second-left-stripe {
+        position: absolute;
+        bottom: -40px;
+        left: -10px;
+        right: calc(50% + 405px);
+        height: 40px;
+        background-color: #7a73ff;
+      }
+      .left-blend-stripe {
+        position: absolute;
+        bottom: -10px;
+        left: calc(50% - 700px);
+        right: calc(50% + 540px);
+        height: 10px;
+        background-color: #0048e5;
+      }
+      .first-right-stripe {
+        position: absolute;
+        bottom: 0;
+        right: -10px;
+        left: calc(50% + 430px);
+        height: 40px;
+        background-color: #7a73ff;
+      }
+    }
+  }
+}
