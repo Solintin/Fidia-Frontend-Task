@@ -55,4 +55,8 @@ export default {
       brands: true
     }
   },
+  target: 'static',
+  generate: {
+    fallback: true
+  }
 }
