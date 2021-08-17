@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import data from '~/components/Contents.js'
+import data from '~/Data/Contents.js'
 export default {
   data() {
     return {

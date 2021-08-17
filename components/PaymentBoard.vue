@@ -71,9 +71,9 @@
 
 <script>
 
-import  RefundedPaymentData from '~/components/RefundedPaymentData.js'
-import  SucceddedPaymentData from '~/components/SucceddedPaymentData.js'
-import  UncapturedPaymentData from '~/components/UncapturedPaymentData.js'
+import  RefundedPaymentData from '~/Data/RefundedPaymentData.js'
+import  SucceddedPaymentData from '~/Data/SucceddedPaymentData.js'
+import  UncapturedPaymentData from '~/Data/UncapturedPaymentData.js'
 export default {
   data() {
     return {
