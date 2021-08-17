@@ -97,7 +97,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   padding: 12px 20px 0px;
-
+  z-index : 100;
   position: fixed;
   width: 270px;
   left: 0;

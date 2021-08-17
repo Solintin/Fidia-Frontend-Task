@@ -70,10 +70,9 @@
 </template>
 
 <script>
-
-import  RefundedPaymentData from '~/Data/RefundedPaymentData.js' //importing Refundedpayment Details JSON Endpoint
-import  SucceddedPaymentData from '~/Data/SucceddedPaymentData.js'  //importing Suceddedpayment Details JSON Endpoint
-import  UncapturedPaymentData from '~/Data/UncapturedPaymentData.js'  //importing Uncaptueredpayment Details JSON Endpoint
+import RefundedPaymentData from '~/Data/RefundedPaymentData.js' //importing Refundedpayment Details JSON Endpoint
+import SucceddedPaymentData from '~/Data/SucceddedPaymentData.js' //importing Suceddedpayment Details JSON Endpoint
+import UncapturedPaymentData from '~/Data/UncapturedPaymentData.js' //importing Uncaptueredpayment Details JSON Endpoint
 export default {
   data() {
     return {
@@ -82,12 +81,12 @@ export default {
     }
   },
   computed: {
-    // Dynamic Data(All, Sucedded, Refunded And Uncaptured) Rendering On the Dashboard 
+    // Dynamic Data(All, Sucedded, Refunded And Uncaptured) Rendering On the Dashboard
     getPaymentDetails() {
       if (this.activeTab === 'all') {
-        this.paymentDatabase = SucceddedPaymentData
-          .concat(RefundedPaymentData)
-          .concat(UncapturedPaymentData)
+        this.paymentDatabase = SucceddedPaymentData.concat(
+          RefundedPaymentData
+        ).concat(UncapturedPaymentData)
       } else if (this.activeTab === 'succedded') {
         this.paymentDatabase = SucceddedPaymentData
       } else if (this.activeTab === 'refunded') {
@@ -132,7 +131,7 @@ export default {
   flex-wrap: nowrap;
   margin-top: 5px;
   border-bottom: 1px solid #e3e8ee;
-        font-size: 14px;
+  font-size: 14px;
 
   div {
     padding: 15px 5px;
@@ -186,7 +185,6 @@ export default {
   padding: 2px 8px 2px 4px;
   border-radius: 26px;
   font-family: 'Times New Roman', Times, serif !important;
-
 
   img {
     height: 10px;
