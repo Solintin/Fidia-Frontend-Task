@@ -177,6 +177,7 @@ export default {
   }
 }
 
+// Toggle Switch Styling
 .switch {
   height: 15px;
   width: 30px;
