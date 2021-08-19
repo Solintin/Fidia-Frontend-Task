@@ -77,13 +77,15 @@ export default {}
   padding-right: 14px;
   margin-left: 270px;
   position: relative;
+  overflow : auto;
+     &::-webkit-scrollbar {
+    display: none;
+}
   //   header syling
   header {
     position: fixed;
     right: 16px;
     left: 270px;
-    // margin-right: 40%;
-    // min-width: 1130px;
     border-bottom: 1px solid #e3e8ee;
     z-index: 1;
     display: flex;
@@ -111,7 +113,7 @@ export default {}
   }
   //   .content-wrapper styling
   .content-wrapper {
-    min-width : 1100px;
+    min-width : 1000px;
     &::-webkit-scrollbar {
     display: none;
 }
@@ -150,8 +152,8 @@ export default {}
     color: #fff;
   }
   .content-footer {
-    position: absolute;
-    bottom: 10px;
+    position: static;
+    bottom: 20px;
     left: 0px;
     right: 0px;
     padding: 13px 35px;

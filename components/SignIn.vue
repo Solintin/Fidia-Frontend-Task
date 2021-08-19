@@ -119,6 +119,7 @@ export default {
   flex-shrink: 0;
   box-sizing: border-box;
   padding: 56px 48px;
+  
 
   .sign-in-container {
     padding-right: 20px;

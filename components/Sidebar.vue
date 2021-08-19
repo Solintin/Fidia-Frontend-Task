@@ -98,6 +98,8 @@ export default {
   align-items: flex-start;
   padding: 12px 20px 0px;
   z-index : 100;
+  height : 100%;
+  overflow : auto;
   position: fixed;
   width: 270px;
   left: 0;
