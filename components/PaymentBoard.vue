@@ -29,7 +29,7 @@
       <div class="tab6"></div>
     </div>
 
-    <div class="payment-board-tabs text-uppercase  ">
+    <div class="payment-board-tabs text-uppercase">
       <div class="tab1"><input type="checkbox" checked /></div>
       <div class="tab2 text-center">Amount</div>
       <div class="tab3"></div>
@@ -44,7 +44,7 @@
       :key="id"
     >
       <div class="tab1"><input type="checkbox" /></div>
-      <div class="tab2 text-end me-2 fs-6 ">
+      <div class="tab2 text-end me-2 fs-6">
         <span>US$ {{ payment.amount }}</span>
       </div>
       <div class="tab3">
@@ -122,8 +122,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.payment-board-tabs{
-font-size: 13px;
+.payment-board-tabs {
+  font-size: 13px;
 }
 .selection-tab,
 .payment-board-tabs,
@@ -146,8 +146,6 @@ font-size: 13px;
   }
   .tab2 {
     min-width: 9%;
-   
-   
   }
   .tab3 {
     min-width: 10%;
@@ -175,12 +173,10 @@ font-size: 13px;
   }
 }
 input[type='checkbox'] {
-  // background: #ffffff;
-  outline: none;
-  // border : none;
-  box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08),
-    0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+
+  box-shadow: 0px 0px 10px rgba(10, 28, 94, 0.12);
+  border-radius: 10px;
+  transform: scale(1.15);
 }
 .selection-tab {
   .tab1,
@@ -191,21 +187,21 @@ input[type='checkbox'] {
     cursor: pointer;
     font-style: normal;
     font-size: 14px;
-    line-height: 16.71px; 
+    line-height: 16.71px;
   }
 }
 .succedded,
 .refunded,
 .uncaptured {
- display: flex;
-flex-direction: row;
-align-items: center;
-padding: 2px 4px 2px 6px;
-  font-weight : 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 4px 2px 6px;
+  font-weight: 600;
   border-radius: 4px;
-font-style: normal;
-font-size: 12px;
-line-height: 14px;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
   img {
     height: 10px;
     width: 10px;
@@ -214,31 +210,31 @@ line-height: 14px;
 }
 
 .payment-board {
-  color: #4F566B;
+  color: #4f566b;
   font-style: normal;
-font-weight: normal;
-font-size: 13px;
-line-height: 16px;
-.tab2{
-font-style: normal;
-color: #1A1F36;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-}
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  .tab2 {
+    font-style: normal;
+    color: #1a1f36;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .succedded {
   background: #cbf4c9;
   font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 14px;
-display: flex;
-align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
 
-/* Dark green */
+  /* Dark green */
 
-color: #0E6245;
+  color: #0e6245;
 }
 .refunded {
   background: #3374b1d5;
