@@ -56,7 +56,7 @@ const SucceddedPaymentData = [
     },
     {
       id: 7,
-      amount: 931.0,
+      amount: 931.31,
       state: 'succedded',
       icon: 'marked.svg',
       desc: '3005be4a-6d4d-487c-85c3-d61cfe64ef63',

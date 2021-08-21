@@ -11,7 +11,7 @@
         </div>
         <!-- Three Right Dashboard icons -->
         <div class="header-tab">
-          <div>
+          <div class="">
             <a href="#"
               ><img src="@/assets/icons/notifications-1.svg" alt=""
             /></a>
@@ -19,7 +19,7 @@
           <div>
             <a h ref="#"><img src="@/assets/icons/help-1.svg" alt="" /></a>
           </div>
-          <div>
+          <div class='text-end'>
             <a href="#"><img src="@/assets/icons/account-1.svg" alt="" /></a>
           </div>
         </div>
@@ -75,13 +75,7 @@ export default {
       toggleBars: false,
     }
   },
-  mounted() {
-    window.addEventListener('resize', function () {
-      const clientWidth = document.body.clientWidth
-      if (clientWidth <= 640) {
-      }
-    })
-  },
+
 }
 </script>
 
@@ -93,7 +87,6 @@ export default {
   position: relative;
   overflow: auto;
 
-  //SideBar Toggle
 
  
 
@@ -107,7 +100,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 30px;
+    padding: 7px 14px 7px 30px;
     box-sizing: border-box;
     margin-bottom: 30px;
     background: #fff;
@@ -120,10 +113,11 @@ export default {
 
   // header description styling
   .header-tab {
-    display: flex;
     flex-direction: row;
     align-items: center;
+    display: flex;
     div {
+      justify-content: flex-end;
       margin-right: 14px;
     }
   }
@@ -169,7 +163,7 @@ export default {
     bottom: 20px;
     left: 0px;
     right: 0px;
-    padding: 12px 35px;
+    padding: 12px 0;
 
     display: flex;
     justify-content: space-between;

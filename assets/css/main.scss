@@ -3,6 +3,8 @@
   font-family: SF Pro Display;
   src: local('SF Pro'), url(~assets/css/sm-pro-font.ttf) format('truetype');
 }
+@import '~bootstrap/scss/bootstrap';
+
 html {
   font-family: SF Pro Display;
   font-style: normal;

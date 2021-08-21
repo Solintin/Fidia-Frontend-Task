@@ -15,7 +15,7 @@
             </div>
             <div>
               <!-- Top DropDOwn -->
-              <select name="dropdown" class="dropdown fs-4">
+              <select name="dropdown" class="dropdown fs-5">
                 <option value="store-name">Store Name</option>
                 <option value="store-name">Other Option</option>
                 <option value="store-name">Other Option</option>

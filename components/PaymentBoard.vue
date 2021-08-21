@@ -29,9 +29,9 @@
       <div class="tab6"></div>
     </div>
 
-    <div class="payment-board-tabs">
+    <div class="payment-board-tabs text-uppercase  ">
       <div class="tab1"><input type="checkbox" checked /></div>
-      <div class="tab2">Amount</div>
+      <div class="tab2 text-center">Amount</div>
       <div class="tab3"></div>
       <div class="tab4">Description</div>
       <div class="tab5">Customer</div>
@@ -44,7 +44,7 @@
       :key="id"
     >
       <div class="tab1"><input type="checkbox" /></div>
-      <div class="tab2">
+      <div class="tab2 text-end me-2 fs-6 ">
         <span>US$ {{ payment.amount }}</span>
       </div>
       <div class="tab3">
@@ -122,6 +122,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.payment-board-tabs{
+font-size: 13px;
+}
 .selection-tab,
 .payment-board-tabs,
 .payment-board {
@@ -131,12 +134,11 @@ export default {
   flex-wrap: nowrap;
   margin-top: 5px;
   border-bottom: 1px solid #e3e8ee;
-  font-size: 14px;
 
   div {
-    padding: 10px 5px;
+    padding: 10px 0;
 
-    margin-right: 5px;
+    // margin-right: 5px;
   }
 
   .tab1 {
@@ -144,17 +146,17 @@ export default {
   }
   .tab2 {
     min-width: 9%;
-    display: flex;
-    // justify-content: center;
+   
    
   }
   .tab3 {
     min-width: 10%;
     display: flex;
     justify-content: center;
+    margin-right: 5px;
   }
   .tab4 {
-    min-width: 44%;
+    min-width: 42%;
   }
   .tab5 {
     min-width: 15%;
@@ -164,7 +166,7 @@ export default {
     margin-left: 10px;
   }
   .tab7 {
-    min-width: 4%;
+    min-width: 6%;
   }
   .active {
     border-bottom: 2px solid #7a73ff;
@@ -198,7 +200,7 @@ input[type='checkbox'] {
  display: flex;
 flex-direction: row;
 align-items: center;
-padding: 1px 4px 1px 6px;
+padding: 2px 4px 2px 6px;
   font-weight : 600;
   border-radius: 4px;
 font-style: normal;
@@ -210,10 +212,7 @@ line-height: 14px;
     margin-left: 5px;
   }
 }
-.payment-board-tabs{
-  text-transform: uppercase;
-  font-size: 12px;
-}
+
 .payment-board {
   color: #4F566B;
   font-style: normal;
@@ -226,7 +225,6 @@ color: #1A1F36;
 font-weight: 600;
 font-size: 14px;
 line-height: 17px;
-text-align: right !important;
 }
 }
 .succedded {
@@ -247,7 +245,7 @@ color: #0E6245;
   color: #07345ed5;
 }
 .uncaptured {
-  background: #be515a;
-  color: #e0c0c3;
+  background: #e7717b;
+  color: #f7f7f7;
 }
 </style>
