@@ -1,35 +1,31 @@
 <template>
   <div>
     <div class="selection-tab">
-      <div
-        :class="[activeTab === 'all' ? 'active' : null, 'tab1']"
-        @click="switchToAll"
-      >
-        All
+      <div class="tab1" @click="switchToAll">
+        <span :class="[activeTab === 'all' ? 'active' : null, 'pb-2']">
+          All</span
+        >
       </div>
-      <div
-        :class="[activeTab === 'succedded' ? 'active' : null, 'tab2']"
-        @click="switchToSuccedded"
-      >
-        Succedded
+      <div class="tab2 d-flex justify-content-center" @click="switchToSuccedded">
+        <span :class="[activeTab === 'succedded' ? 'active' : null, 'pb-2']">
+          Succedded</span
+        >
       </div>
-      <div
-        :class="[activeTab === 'refunded' ? 'active' : null, 'tab3']"
-        @click="switchToRefunded"
-      >
-        Refunded
+      <div class="tab3" @click="switchToRefunded">
+        <span :class="[activeTab === 'refunded' ? 'active' : null, 'pb-2']">
+          Refunded</span
+        >
       </div>
-      <div
-        :class="[activeTab === 'uncaptured' ? 'active' : null, 'tab4']"
-        @click="switchToUncaptured"
-      >
-        uncaptured
+      <div class="tab4" @click="switchToUncaptured">
+        <span :class="[activeTab === 'uncaptured' ? 'active' : null, 'pb-2']">
+          Uncaptured</span
+        >
       </div>
-      <div class="tab5"></div>
-      <div class="tab6"></div>
+      <div class="tab5 pb-2"></div>
+      <div class="tab6 pb-2"></div>
     </div>
 
-    <div class="payment-board-tabs text-uppercase">
+    <div class="payment-board-tabs text-uppercase py-2">
       <div class="tab1"><input type="checkbox" checked /></div>
       <div class="tab2 text-center">Amount</div>
       <div class="tab3"></div>
@@ -39,15 +35,15 @@
     </div>
 
     <div
-      class="payment-board"
+      class="payment-board py-1"
       v-for="(payment, id) in getPaymentDetails"
       :key="id"
     >
-      <div class="tab1"><input type="checkbox" /></div>
-      <div class="tab2 text-end me-2 fs-6">
+      <div class="tab1 py-1"><input type="checkbox" /></div>
+      <div class="tab2 text-end fs-6">
         <span>US$ {{ payment.amount }}</span>
       </div>
-      <div class="tab3">
+      <div class="tab3 text-capitalize">
         <span :class="payment.state">
           <span>{{ payment.state }}</span>
           <span>
@@ -123,7 +119,7 @@ export default {
 
 <style lang="scss" scoped>
 .payment-board-tabs {
-  font-size: 13px;
+  font-size: 12px;
 }
 .selection-tab,
 .payment-board-tabs,
@@ -135,14 +131,9 @@ export default {
   margin-top: 5px;
   border-bottom: 1px solid #e3e8ee;
 
-  div {
-    padding: 10px 0;
-
-    // margin-right: 5px;
-  }
-
   .tab1 {
-    min-width: 3%;
+    min-width: 4%;
+    display: flex;
   }
   .tab2 {
     min-width: 9%;
@@ -151,10 +142,11 @@ export default {
     min-width: 10%;
     display: flex;
     justify-content: center;
-    margin-right: 5px;
+    margin: 0 10px 0 8px;
   }
   .tab4 {
     min-width: 42%;
+    display: flex;
   }
   .tab5 {
     min-width: 15%;
@@ -164,16 +156,18 @@ export default {
     margin-left: 10px;
   }
   .tab7 {
-    min-width: 6%;
+    min-width: 5%;
+    display: flex;
+    align-items: center;
   }
   .active {
     border-bottom: 2px solid #7a73ff;
     color: #7a73ff;
     margin-bottom: -1px;
+    width: min-content;
   }
 }
 input[type='checkbox'] {
-
   box-shadow: 0px 0px 10px rgba(10, 28, 94, 0.12);
   border-radius: 10px;
   transform: scale(1.15);
@@ -196,15 +190,15 @@ input[type='checkbox'] {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 2px 4px 2px 6px;
+  padding: 3px 4px 4px 6px;
   font-weight: 600;
   border-radius: 4px;
   font-style: normal;
   font-size: 12px;
   line-height: 14px;
   img {
-    height: 10px;
-    width: 10px;
+    height: 13px;
+    width: 13px;
     margin-left: 5px;
   }
 }

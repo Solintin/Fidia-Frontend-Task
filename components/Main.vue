@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="main">
-
       <!-- =========== Dashbaord Header Begins ============= -->
       <header>
         <div>
@@ -16,10 +15,10 @@
               ><img src="@/assets/icons/notifications-1.svg" alt=""
             /></a>
           </div>
-          <div>
+          <divc class="mx-3">
             <a h ref="#"><img src="@/assets/icons/help-1.svg" alt="" /></a>
-          </div>
-          <div class='text-end'>
+          </divc>
+          <div class="text-end">
             <a href="#"><img src="@/assets/icons/account-1.svg" alt="" /></a>
           </div>
         </div>
@@ -36,7 +35,7 @@
               <img src="@/assets/icons/filter.svg" alt="" />
               <span>Filter</span>
             </div>
-            <div class="export">
+            <div class="export mx-2">
               <img src="@/assets/icons/up-arrow.svg" alt="" />
               <span>Export</span>
             </div>
@@ -75,7 +74,6 @@ export default {
       toggleBars: false,
     }
   },
-
 }
 </script>
 
@@ -86,9 +84,6 @@ export default {
   margin-left: 270px;
   position: relative;
   overflow: auto;
-
-
- 
 
   //   header syling
   header {
@@ -118,7 +113,7 @@ export default {
     display: flex;
     div {
       justify-content: flex-end;
-      margin-right: 14px;
+      // margin-right: 7px;
     }
   }
   //   .content-wrapper styling
@@ -139,6 +134,7 @@ export default {
     flex-direction: row;
     align-items: center;
     padding: 6px 8px;
+    font-size: 14px;
     width: auto;
     height: 29px;
     cursor: pointer;
