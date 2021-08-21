@@ -8,7 +8,19 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css',
+      },
+      {
+        rel: 'script',
+        type: 'src',
+        href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -26,7 +38,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/fontawesome',
   ],
-
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -47,11 +58,11 @@ export default {
     component: 'fa',
     icons: {
       solid: true,
-      brands: true
-    }
+      brands: true,
+    },
   },
   target: 'static',
   generate: {
-    fallback: true
-  }
+    fallback: true,
+  },
 }

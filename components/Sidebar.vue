@@ -1,6 +1,12 @@
 <template>
   <div>
-    <div class="sidebar">
+    <div
+      :class="[isOpen ? 'isOpen' : null, 'toggle-menu']"
+      @click="openSideBar"
+    >
+      <fa :icon="['fas', isOpen ? 'angle-left' : 'angle-right']" class="icon" />
+    </div>
+    <div :class="[isOpen ? 'isOpen' : null, 'sidebar']">
       <div class="sidebar-content">
         <div>
           <div class="header">
@@ -9,7 +15,7 @@
             </div>
             <div>
               <!-- Top DropDOwn -->
-              <select name="dropdown">
+              <select name="dropdown" class="dropdown fs-4">
                 <option value="store-name">Store Name</option>
                 <option value="store-name">Other Option</option>
                 <option value="store-name">Other Option</option>
@@ -79,13 +85,16 @@ export default {
     return {
       data: data,
       onSwitch: false,
+      isOpen: false,
     }
   },
   methods: {
-
     // Toggle Switch Methods
     toggleSwitch() {
       this.onSwitch = !this.onSwitch
+    },
+    openSideBar() {
+      this.isOpen = !this.isOpen
     },
   },
 }
@@ -97,15 +106,17 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   padding: 12px 20px 0px;
-  z-index : 100;
-  height : 100%;
-  overflow : auto;
+  z-index: 100;
+  height: 100%;
+  overflow: auto;
   position: fixed;
-  width: 270px;
+  min-width: 270px;
   left: 0;
   top: 0;
   bottom: 0;
+  line-height: 17px;
   box-sizing: border-box;
+  transition: all 0.2s linear;
 
   /* Grey 100 */
 
@@ -133,6 +144,10 @@ export default {
       margin-right: 5px;
     }
   }
+  .dropdown{
+    font-weight: 600;
+    font-size: 15px;
+  }
   img {
     height: 40%;
     margin-left: -4px;
@@ -140,7 +155,8 @@ export default {
   .contents-list {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 20px;
 
     div:first-child {
       margin-bottom: 10px;
@@ -166,38 +182,62 @@ export default {
       flex-direction: column;
       margin-left: 37px;
       margin-top: 5px;
+      font-size: 15px;
       &:last-child {
         margin-bottom: 20px;
       }
     }
   }
   .developers {
-    margin-top: 10px;
+    margin-top: 8px;
   }
   .settings {
-    margin: 10px 0;
+    margin: 8px 0;
   }
 }
-
+.toggle-menu {
+  cursor: pointer;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  left: 270px;
+  z-index: 2;
+  background: royalblue;
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(-40%, -50%);
+  display: flex;
+  justify-content: center;
+  padding-left: 13px;
+  align-items: center;
+  color: #000;
+  background: #f7fafc;
+  display: none;
+  box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08),
+    0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.icon {
+  font-size: 20px;
+}
 // Toggle Switch Styling
 .switch {
   height: 15px;
-  width: 30px;
+  width: 28px;
   background: #e3e8ee;
   border: 1px solid #d9dce1;
   box-sizing: border-box;
   border-radius: 26px;
   margin-left: -5px;
-  margin-right: 10px;
-  margin-top: 5px;
+  margin-right: 6px;
+  margin-top: 7px;
   .inner-switch {
     height: 15px;
-    width: 15px;
+    width: 14px;
     background: #fff;
     border: 1px solid #d9dce1;
     box-sizing: border-box;
     border-radius: 26px;
-    margin-top: -2px;
+    margin-top: -1px;
     margin-left: -2px;
     transition: all 0.28s linear;
     cursor: pointer;
@@ -207,6 +247,26 @@ export default {
       transition: all 0.28s linear;
       background: #7a73ff;
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .toggle-menu {
+    display: flex;
+  }
+  .sidebar {
+    left: -100vw;
+    transition: all 0.2s linear;
+    &.isOpen {
+      left: 0;
+    }
+  }
+  .toggle-menu {
+    left: 0;
+    transition: all 0.2s linear;
+    &.isOpen {
+      left: 270px;
     }
   }
 }

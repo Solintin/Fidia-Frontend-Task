@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="main">
+
       <!-- =========== Dashbaord Header Begins ============= -->
       <header>
         <div>
@@ -68,7 +69,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      toggleBars: false,
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', function () {
+      const clientWidth = document.body.clientWidth
+      if (clientWidth <= 640) {
+      }
+    })
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -77,10 +91,12 @@ export default {}
   padding-right: 14px;
   margin-left: 270px;
   position: relative;
-  overflow : auto;
-     &::-webkit-scrollbar {
-    display: none;
-}
+  overflow: auto;
+
+  //SideBar Toggle
+
+ 
+
   //   header syling
   header {
     position: fixed;
@@ -113,10 +129,7 @@ export default {}
   }
   //   .content-wrapper styling
   .content-wrapper {
-    min-width : 1000px;
-    &::-webkit-scrollbar {
-    display: none;
-}
+    min-width: 1000px;
     padding: 80px 30px 0 30px;
     .content-header {
       display: flex;
@@ -156,7 +169,7 @@ export default {}
     bottom: 20px;
     left: 0px;
     right: 0px;
-    padding: 13px 35px;
+    padding: 12px 35px;
 
     display: flex;
     justify-content: space-between;
@@ -206,6 +219,16 @@ export default {}
     color: #1a1f36;
     font-size: 28px;
     font-weight: bold;
+  }
+}
+@media screen and (max-width: 640px) {
+  .main {
+    margin-left: 0;
+    transition: width 0.2s linear;
+    header {
+      left: 0;
+      transition: width 0.2s linear;
+    }
   }
 }
 </style>

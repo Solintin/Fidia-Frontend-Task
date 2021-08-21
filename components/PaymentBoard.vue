@@ -134,25 +134,30 @@ export default {
   font-size: 14px;
 
   div {
-    padding: 15px 5px;
+    padding: 10px 5px;
 
     margin-right: 5px;
   }
 
   .tab1 {
-    min-width: 4%;
+    min-width: 3%;
   }
   .tab2 {
     min-width: 9%;
+    display: flex;
+    // justify-content: center;
+   
   }
   .tab3 {
     min-width: 10%;
+    display: flex;
+    justify-content: center;
   }
   .tab4 {
     min-width: 44%;
   }
   .tab5 {
-    min-width: 14%;
+    min-width: 15%;
   }
   .tab6 {
     min-width: 14%;
@@ -167,35 +172,75 @@ export default {
     margin-bottom: -1px;
   }
 }
+input[type='checkbox'] {
+  // background: #ffffff;
+  outline: none;
+  // border : none;
+  box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08),
+    0px 0px 0px 1px rgba(60, 66, 87, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
 .selection-tab {
   .tab1,
   .tab2,
   .tab3,
   .tab4 {
+    font-weight: 500;
     cursor: pointer;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16.71px; 
   }
 }
 .succedded,
 .refunded,
 .uncaptured {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2px 8px 2px 4px;
-  border-radius: 26px;
-  font-family: 'Times New Roman', Times, serif !important;
-
+ display: flex;
+flex-direction: row;
+align-items: center;
+padding: 1px 4px 1px 6px;
+  font-weight : 600;
+  border-radius: 4px;
+font-style: normal;
+font-size: 12px;
+line-height: 14px;
   img {
     height: 10px;
-    width: 8px;
+    width: 10px;
     margin-left: 5px;
   }
 }
-
+.payment-board-tabs{
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.payment-board {
+  color: #4F566B;
+  font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 16px;
+.tab2{
+font-style: normal;
+color: #1A1F36;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+text-align: right !important;
+}
+}
 .succedded {
   background: #cbf4c9;
-  color: #0e6245;
+  font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 14px;
+display: flex;
+align-items: center;
+
+/* Dark green */
+
+color: #0E6245;
 }
 .refunded {
   background: #3374b1d5;
